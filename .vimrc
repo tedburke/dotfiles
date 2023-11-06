@@ -9,15 +9,15 @@ filetype indent on
 " Allow switching buffers with unsaved changes
 set hidden
 
-" Map <c-^> to cycle through buffers
-" Exclude terminal buffers because <c-^> won't work there
+" Map backspace key to cycle through buffers (in normal mode)
+" Exclude terminal buffers because <BS> won't work there
 function! NextBuffer()
     bnext
     while &buftype == 'terminal'
         bnext
     endwhile
 endfunction
-:nnoremap <c-^> :call NextBuffer()<CR>
+:nnoremap <BS> :call NextBuffer()<CR>
 
 " Syntax highlighting
 syntax on
