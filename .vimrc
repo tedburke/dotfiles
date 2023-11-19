@@ -22,6 +22,12 @@ endfunction
 " Syntax highlighting
 syntax on
 
+" Enable search highlighting and incremental search
+" Note: Use :nohls to hide highlighting without changing setting
+:set incsearch hlsearch
+":set nohlsearch
+":set noincsearch
+
 " Remap up and down arrow keys to move cursor
 " one screen line in normal and visual modes
 :noremap <Up> gk
